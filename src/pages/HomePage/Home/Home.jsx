@@ -6,12 +6,17 @@ import Menus from "../Menus/Menus";
 import ChefRecommends from "../ChefRecommends/ChefRecommends";
 import Featured from "../Featured/Featured";
 import Testimonial from "../Testimonial/Testimonial";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
 
     return (
 
         <div>
+            <Helmet>
+                <title>Home | Bistro Boss Restaurant</title>
+            </Helmet>
+
             <Banner></Banner>
 
             <div className="w-11/12 mx-auto">

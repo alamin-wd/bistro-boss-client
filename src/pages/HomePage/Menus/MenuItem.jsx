@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
 
-const MenuItem = ({ menu }) => {
+const MenuItem = ({ menuItem }) => {
 
-    const { name, image, recipe, price } = menu;
+    const { name, image, recipe, price } = menuItem;
 
     return (
 
         <div className='flex items-start gap-6'>
-            <img style={{borderRadius:'0 200px 200px 200px'}}
-            className='w-[100px] h-[90px]'
-            src={image} alt="" />
+            <img style={{ borderRadius: '0 200px 200px 200px' }}
+                className='w-[100px] h-[90px]'
+                src={image} alt="" />
 
             <div>
-                <h4 className='text-[#151515] text-lg font-medium uppercase'>{name} <span className='font-normal'>-------------------</span> </h4>
+                <h4 className='text-[#151515] text-lg font-medium uppercase'>{name} <span className='font-normal'> -------------- </span> </h4>
                 <p className='text-[#737373] mt-2'>{recipe}</p>
             </div>
 
@@ -23,7 +23,7 @@ const MenuItem = ({ menu }) => {
 };
 
 MenuItem.propTypes = {
-    menu: PropTypes.node,
+    menuItem: PropTypes.node,
 }
 
 export default MenuItem;

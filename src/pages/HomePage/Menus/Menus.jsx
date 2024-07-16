@@ -1,30 +1,20 @@
-import { useEffect, useState } from "react";
+
+import useMenu from "../../../hooks/useMenu";
 import MenuItem from "./MenuItem";
 
 const Menus = () => {
 
-    const [menus, setMenus] = useState([]);
+    const [menus] = useMenu();
 
-    useEffect(() => {
-
-        fetch('/menu.json')
-            .then(res => res.json())
-            .then(data => {
-
-                const popularItems = data.filter(item => item.category === 'popular');
-
-                setMenus(popularItems);
-            });
-
-    }, [])
+    const popularItems = menus.filter(item => item.category === 'popular');
 
     return (
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {
-                menus.map(menu => <MenuItem
-                    key={menu._id}
-                    menu={menu}
+                popularItems.map(menuItem => <MenuItem
+                    key={menuItem._id}
+                    menuItem={menuItem}
                 ></MenuItem>)
             }
         </div>

@@ -1,12 +1,39 @@
 import { HiMenuAlt1 } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
-
+    // hover:text-[#EEFF25]
     const menus =
         <>
             <li>
-                <Link>Home</Link>
+                <NavLink to={'/'} activeClassName="active">
+                    Home
+                </NavLink>
+            </li>
+
+            <li>
+                <NavLink to={'/contact-us'} activeClassName="active">
+                    Contact Us
+                </NavLink>
+            </li>
+
+            <li>
+                <NavLink to={'/dashboard'} activeClassName="active">
+                    Dashboard
+                </NavLink>
+            </li>
+
+            <li>
+                <NavLink to={'/menus'} activeClassName="active">
+                    Our Menu
+                </NavLink>
+            </li>
+
+            <li>
+                <NavLink to={'/shop'} activeClassName="active">
+                    Our Shop
+                </NavLink>
             </li>
         </>
 
@@ -43,7 +70,7 @@ const Navbar = () => {
                 {/* Navbar Center */}
                 <div className="navbar-center hidden lg:flex">
 
-                    <ul className="menu-horizontal px-1 hover:text-[#EEFF25] text-lg font-medium">
+                    <ul className="menu-horizontal text-md gap-6 px-2">
                         {
                             menus
                         }
