@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import MenuItem from '../../../pages/HomePage/Menus/MenuItem';
+import { Link } from 'react-router-dom';
 
-const MenuCategory = ({ menuItems }) => {
+const MenuCategory = ({ menuItems, category }) => {
 
     return (
 
@@ -18,9 +19,13 @@ const MenuCategory = ({ menuItems }) => {
             </div>
 
             <div className=' text-center'>
-                <button className="text-[#1F2937] hover:text-[#BB8506] text-lg font-medium px-4 py-1 border-b-2 border-[#1F2937] rounded-lg uppercase">
-                    ORDER YOUR FAVOURITE FOOD
-                </button>
+
+                <Link to={`/shop/${category}`}>
+                    <button className="text-[#1F2937] hover:text-[#BB8506] font-medium px-2 py-1 border-b-2 border-[#1F2937] rounded-lg uppercase">
+                        ORDER YOUR FAVOURITE FOOD
+                    </button>
+                </Link>
+
             </div>
 
         </div>
@@ -29,6 +34,7 @@ const MenuCategory = ({ menuItems }) => {
 
 MenuCategory.propTypes = {
     menuItems: PropTypes.node,
+    category: PropTypes.node,
 }
 
 export default MenuCategory;

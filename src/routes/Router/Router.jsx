@@ -5,6 +5,8 @@ import ContactUs from "../../pages/ContactUs/ContactUs";
 import Dashboard from "../../pages/Dashboard/Dashboard";
 import OurMenu from "../../pages/OurMenu/OurMenu";
 import Shop from "../../pages/Shop/Shop";
+import SignUp from "../../pages/Authentication/SignUp/SignUp";
+import SignIn from "../../pages/Authentication/SignIn/SignIn";
 
 export const router = createBrowserRouter([
     {
@@ -28,17 +30,17 @@ export const router = createBrowserRouter([
                 element: <OurMenu></OurMenu>,
             },
             {
-                path: "/shop",
+                path: "/shop/:category",
                 element: <Shop></Shop>,
             },
-            // {
-            //     path: "/sign-up",
-            //     element: ,
-            // },
-            // {
-            //     path: "/sign-in",
-            //     element: ,
-            // },
-        ]
+        ],
     },
+    {
+        path: "/sign-up",
+        element: <SignUp></SignUp>,
+    },
+    {
+        path: "/sign-in",
+        element: <SignIn></SignIn>,
+    }
 ]);

@@ -3,11 +3,12 @@ import Cover from "../../components/Shared/Cover/Cover";
 import useMenu from "../../hooks/useMenu";
 import SectionTitle from "../../components/Shared/SectionTitle/SectionTitle";
 import MenuCategory from "../../components/Shared/MenuCategory/MenuCategory";
-import coverBg from "../../../src/assets/menu/banner3.jpg";
+import coverPageBg from "../../../src/assets/menu/banner3.jpg";
 import dessertBg from "../../../src/assets/menu/dessert-bg.jpeg";
 import pizzaBg from "../../../src/assets/menu/pizza-bg.jpg";
 import saladBg from "../../../src/assets/menu/salad-bg.jpg";
 import soupBg from "../../../src/assets/menu/soup-bg.jpg";
+import PageCover from "../../components/Shared/PageCover/PageCover";
 
 const OurMenu = () => {
 
@@ -29,11 +30,11 @@ const OurMenu = () => {
 
             {/* Page Cover  */}
             <div className="w-full">
-                <Cover
-                    coverBg={coverBg}
-                    title={"OUR MENU"}
+                <PageCover
+                    coverPageBg={coverPageBg}
+                    title={"Menu"}
                     description={"Would you like to try a dish?"}
-                ></Cover>
+                ></PageCover>
             </div>
 
             <div className="my-20">
@@ -61,7 +62,7 @@ const OurMenu = () => {
                     <div className="w-full my-10">
                         <Cover
                             coverBg={dessertBg}
-                            title={"DESSERT'S"}
+                            title={"desserts"}
                             description={"Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer."}
                         ></Cover>
                     </div>
@@ -69,6 +70,7 @@ const OurMenu = () => {
                     <div className="w-11/12 mx-auto">
 
                         <MenuCategory
+                        category={"dessert"}
                             menuItems={desserts}
                         ></MenuCategory>
 
@@ -82,7 +84,7 @@ const OurMenu = () => {
                     <div className="w-full my-10">
                         <Cover
                             coverBg={pizzaBg}
-                            title={"Pizza's"}
+                            title={"pizza"}
                             description={"Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer."}
                         ></Cover>
                     </div>
@@ -90,6 +92,7 @@ const OurMenu = () => {
                     <div className="w-11/12 mx-auto">
 
                         <MenuCategory
+                        category={"pizza"}
                             menuItems={pizzas}
                         ></MenuCategory>
 
@@ -103,7 +106,7 @@ const OurMenu = () => {
                     <div className="w-full my-10">
                         <Cover
                             coverBg={saladBg}
-                            title={"Salad's"}
+                            title={"salad"}
                             description={"Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer."}
                         ></Cover>
                     </div>
@@ -111,6 +114,7 @@ const OurMenu = () => {
                     <div className="w-11/12 mx-auto">
 
                         <MenuCategory
+                        category={"salad"}
                             menuItems={salads}
                         ></MenuCategory>
 
@@ -124,7 +128,7 @@ const OurMenu = () => {
                     <div className="w-full my-10">
                         <Cover
                             coverBg={soupBg}
-                            title={"Soup's"}
+                            title={"soup"}
                             description={"Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer."}
                         ></Cover>
                     </div>
@@ -132,6 +136,7 @@ const OurMenu = () => {
                     <div className="w-11/12 mx-auto">
 
                         <MenuCategory
+                        category={"soup"}
                             menuItems={soups}
                         ></MenuCategory>
 
@@ -144,8 +149,8 @@ const OurMenu = () => {
 
                     <div className="w-full my-10">
                         <Cover
-                            coverBg={coverBg}
-                            title={"Drink's"}
+                            coverBg={coverPageBg}
+                            title={"drinks"}
                             description={"Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer."}
                         ></Cover>
                     </div>
@@ -153,6 +158,7 @@ const OurMenu = () => {
                     <div className="w-11/12 mx-auto">
 
                         <MenuCategory
+                            category={"drinks"}
                             menuItems={drinks}
                         ></MenuCategory>
 

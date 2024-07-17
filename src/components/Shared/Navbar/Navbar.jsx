@@ -26,13 +26,13 @@ const Navbar = () => {
 
             <li>
                 <NavLink to={'/menus'} activeClassName="active">
-                    Our Menu
+                    Menu
                 </NavLink>
             </li>
 
             <li>
-                <NavLink to={'/shop'} activeClassName="active">
-                    Our Shop
+                <NavLink to={'/shop/salad'} activeClassName="active">
+                    Shop
                 </NavLink>
             </li>
         </>
@@ -57,7 +57,7 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    <div className="w-48">
+                    <div className="w-48 text-[#EEFF25]">
                         <Link to="/">
                             <h2 className="text-xl md:text-3xl font-bold ">Bistro Boss</h2>
 
@@ -79,7 +79,19 @@ const Navbar = () => {
 
                 {/* Navbar End */}
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+
+                    <Link to={"sign-up"}>
+                        <button className="px-3 py-1 text-white font-medium">
+                            Sign Up
+                        </button>
+                    </Link>
+
+                    <Link to={"sign-in"}>
+                        <button className="px-3 py-1 text-white font-medium">
+                            Sign In
+                        </button>
+                    </Link>
+
                 </div>
             </div>
 
